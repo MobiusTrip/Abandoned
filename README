@@ -10,6 +10,7 @@ This is the readme file for Abandoned
 --- Textures _(Textures that are applied to materials in this Scene)_
 ---- Materials _(Unity generates this folder by its self so its best to keep using it for materials that relate to 3d Models)_
 ---- LightMaps _(Light map files or bump map - or any other secondary textures applied to the main texture)
+--- Particles
 
 -- Moving_Assets
 --- Player_Characters

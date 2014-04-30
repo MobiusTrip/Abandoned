@@ -46,6 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Demo\Scripts\Platform.js" />
+     <Compile Include="Assets\Inventory.js" />
+     <Compile Include="Assets\InventoryDisplay\BagStyle\InventoryDisplayBag.js" />
+     <Compile Include="Assets\Scripts\ItemInventory\Item.js" />
+     <Compile Include="Assets\Scripts\ItemInventory\Player.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />
@@ -63,6 +68,7 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\README.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />

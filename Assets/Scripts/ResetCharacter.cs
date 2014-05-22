@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ResetCharacter : MonoBehaviour {
@@ -8,6 +8,11 @@ public class ResetCharacter : MonoBehaviour {
 			//Debug.Log ("Reset");
 
 			transform.position = new Vector3(0, 2, 0);
+		}
+		else if(Input.GetKeyUp(KeyCode.Escape)){
+			Debug.Log ("Quit");
+			
+			Application.Quit();
 		}
 	}
 }

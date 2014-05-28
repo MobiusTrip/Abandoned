@@ -19,8 +19,8 @@ ModelImporter:
     6400002: LidLP
     9500000: //RootNode
   materials:
-    importMaterials: 0
-    materialName: 0
+    importMaterials: 1
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4

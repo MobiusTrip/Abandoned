@@ -69,6 +69,7 @@ function Update ()
 		if (Input.GetKeyDown(ButtonToPress) && canPickUp == true)
 		{
 			theItem.PickUpItem();
+			this.enabled = false;
 		}
 	}
 }

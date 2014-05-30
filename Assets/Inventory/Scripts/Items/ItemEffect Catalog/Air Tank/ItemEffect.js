@@ -24,10 +24,10 @@ function Awake ()
 //This is called when the object should be used.
 function UseEffect () 
 {
-	Debug.Log("[INSERT EFFECT ALERT HERE]");
+	Debug.Log("Oxygen Increase");
 	
 	//INSERT CUSTOM CODE HERE!
-	/////////
+	/////////refrence andrews oxygen meter, increase oxygen count
 	
 	//Play a sound
 	playersInv.gameObject.SendMessage("PlayDropItemSound", SendMessageOptions.DontRequireReceiver);

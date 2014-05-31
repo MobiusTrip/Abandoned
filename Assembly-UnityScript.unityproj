@@ -57,6 +57,9 @@
      <Compile Include="Assets\Inventory\Scripts\Other\InvAudio.js" />
      <Compile Include="Assets\Inventory\Scripts\Other\InvPauseGame.js" />
      <Compile Include="Assets\Inventory\Scripts\Other\WeaponSwitch.js" />
+     <Compile Include="Assets\Menu Assets\Scripts\Options.js" />
+     <Compile Include="Assets\Menu Assets\Scripts\Play.js" />
+     <Compile Include="Assets\Menu Assets\Scripts\Quit.js" />
      <Compile Include="Assets\Scripts\CharacterStats.js" />
      <Compile Include="Assets\Scripts\CrateOpen.js" />
      <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />

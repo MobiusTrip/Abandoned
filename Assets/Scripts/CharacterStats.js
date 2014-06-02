@@ -3,12 +3,12 @@
 //Public Health : double = 100;
 public var Oxygen : double = 100;
 public var DepleteRate = 10;
-private var MaxOxygen : double;
+public var MaxOxygen : double;
 private var OxygenPercent : double;
 //var Style : GUIStyle;
 
 function Start () {
-	MaxOxygen = Oxygen;
+	MaxOxygen = 100;
 	OxygenPercent = Oxygen/MaxOxygen*100;
 	DepleteOxy();
 //	Style = Style.normal.textColor = Color.blue;
@@ -35,7 +35,7 @@ function DepleteOxy(){
 function OnGUI(){
 	GUI.color.a = .5;
 	GUI.contentColor = Color.blue;
-	GUI.Label(Rect(10,Screen.height-50,30,30),OxygenPercent + "%");
+	GUI.Label(Rect(10,Screen.height-50,30,30),Mathf.Ceil(OxygenPercent) + "%");
 }
 
 function Dead(){

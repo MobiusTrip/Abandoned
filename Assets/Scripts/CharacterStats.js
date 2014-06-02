@@ -15,7 +15,7 @@ function Start () {
 }
 
 function Update () {
-
+	
 }
 
 function DepleteOxy(){
@@ -33,9 +33,16 @@ function DepleteOxy(){
 }
 
 function OnGUI(){
-	GUI.color.a = .5;
+	//GUI.color.a = .5;
+	if (Oxygen >= 70 ) {
+		GUI.color = Color.green;
+	} else if (Oxygen >= 30) {
+		GUI.color = Color.yellow;
+	} else {
+		GUI.color = Color.red;
+	}
 	GUI.contentColor = Color.blue;
-	GUI.Label(Rect(10,Screen.height-50,30,30),Mathf.Ceil(OxygenPercent) + "%");
+	GUI.Box(Rect(10,Screen.height-Oxygen,25,Oxygen),Mathf.Ceil(OxygenPercent) + "%");
 }
 
 function Dead(){

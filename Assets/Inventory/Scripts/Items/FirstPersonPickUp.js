@@ -39,14 +39,19 @@ function OnGUI ()
 	
 	if (canPickUp == true)
 	{
-		if (transform.name.Length <= 7)
+		//if (transform.name.Length <= 7)
+		//.length = 13 is perfect
+		//{
+			//var boxlength : int = ((transform.name.Length*10)+80);
+			GUI.Box (Rect (Screen.width*0.5-(165*0.5), 200, ((transform.name.Length*10)+80), 22), "Press E to pick up " + transform.name + ".");
+		/*}
+		else if (transform.name.Length == 13)
 		{
-			GUI.Box (Rect (Screen.width*0.5-(165*0.5), 200, 165, 22), "Press E to pick up " + transform.name + ".");
+			GUI.Box (Rect (Screen.width*0.5-(185*0.5), 200, 210, 22), "Press E to pick up " + transform.name + ".");
 		}
-		else
-		{
-			GUI.Box (Rect (Screen.width*0.5-(185*0.5), 200, 185, 22), "Press E to pick up " + transform.name + ".");
-		}
+		else{
+		GUI.Box (Rect (Screen.width*0.5-(185*0.5), 200, 220, 22), "Press E to pick up " + transform.name + ".");
+		}*/
 	}
 }
 

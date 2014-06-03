@@ -6,6 +6,8 @@ var deleteOnUse = true;
 
 private var playersInv : Inventory;
 private var item : Item;
+//private var PlayerObject : GameObject;
+//private var StatsScript : GameObject;
 
 @script AddComponentMenu ("Inventory/Items/Item Effect")
 @script RequireComponent(Item)
@@ -13,6 +15,9 @@ private var item : Item;
 //This is where we find the components we need
 function Awake ()
 {
+	//PlayerObject = GameObject.Find("Main Character");
+	//StatsScript = PlayerObject.GetComponent("Character Stats");
+	//StatsScript.test();
 	playersInv = FindObjectOfType(Inventory); //finding the players inv.
 	if (playersInv == null)
 	{
@@ -23,11 +28,22 @@ function Awake ()
 
 //This is called when the object should be used.
 function UseEffect () 
-{
-	Debug.Log("[INSERT EFFECT ALERT HERE]");
-	
+{	
 	//INSERT CUSTOM CODE HERE!
-	/////////
+	var playerObj : GameObject;
+	var scoreScript : CharacterStats;
+	playerObj = GameObject.Find("Main Character");
+	scoreScript = playerObj.GetComponent("CharacterStats");
+	if (gameObject.name == "OxygenRefill"){
+        scoreScript.Oxygen += 10;
+        if (scoreScript.Oxygen > scoreScript.MaxOxygen){
+        	scoreScript.Oxygen = scoreScript.Oxygen - (scoreScript.Oxygen - scoreScript.MaxOxygen);
+        	}
+        else {}
+		}
+	else if (gameObject.name == "OxygenUpgrade"){
+        scoreScript.MaxOxygen += 50;
+		}
 	
 	//Play a sound
 	playersInv.gameObject.SendMessage("PlayDropItemSound", SendMessageOptions.DontRequireReceiver);

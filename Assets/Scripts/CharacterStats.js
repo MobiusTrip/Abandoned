@@ -1,31 +1,30 @@
-﻿#pragma strict
+﻿/*
+Summary: The CharacterStats script controls the player's life using simplistic math (at the moment) and 
+tells the game whether it should terminate
+*/
 
-//Public Health : double = 100;
+#pragma strict
+
 public var Oxygen : double = 100;
 public var DepleteRate = 10;
 public var MaxOxygen : double;
 private var OxygenPercent : double;
-//var Style : GUIStyle;
 
+//executed at the start of the script and is only run once
 function Start () {
 	MaxOxygen = 100;
 	OxygenPercent = Oxygen/MaxOxygen*100;
 	DepleteOxy();
-//	Style = Style.normal.textColor = Color.blue;
 }
 
-function Update () {
-	
-}
-
-function DepleteOxy(){
-	while(true){
-		if(Oxygen > 0){
+function DepleteOxy() {
+	while(true) {
+		if(Oxygen > 0) {
 			Oxygen -= 1;
 			OxygenPercent = Oxygen/MaxOxygen*100;
 			yield WaitForSeconds(DepleteRate);
 		} 
-		else{
+		else {
 			Dead();
 			yield;
 		}
@@ -33,7 +32,6 @@ function DepleteOxy(){
 }
 
 function OnGUI(){
-	//GUI.color.a = .5;
 	if (Oxygen >= 70 ) {
 		GUI.color = Color.green;
 	} else if (Oxygen >= 30) {
@@ -46,7 +44,5 @@ function OnGUI(){
 }
 
 function Dead(){
-	Debug.Log("RIP");
-	
-	//insert death stuff here
+	Debug.Log("RIP"); //insert death stuff here
 }

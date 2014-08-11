@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 
-public class Module : MonoBehaviour
-{
+public class Module : MonoBehaviour {
 	public string[] Tags;
 
-	public ModuleConnector[] GetExits()
-	{
+	public ModuleConnector[] GetExits() {
 		return GetComponentsInChildren<ModuleConnector>();
 	}
 }

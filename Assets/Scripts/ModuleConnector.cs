@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
 
-
-public class ModuleConnector : MonoBehaviour
-{
+public class ModuleConnector : MonoBehaviour {
 	public string[] Tags;
 	public bool IsDefault;
 
-	void OnDrawGizmos()
-	{
+	void OnDrawGizmos() {
 		var scale = 1.0f;
 
 		Gizmos.color = Color.blue;
